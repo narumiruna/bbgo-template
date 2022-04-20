@@ -1,1 +1,1 @@
-# bbgo-strategy-template
+# bbgo-template

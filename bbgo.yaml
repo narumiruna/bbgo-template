@@ -1,0 +1,18 @@
+---
+build:
+  dir: build
+  imports:
+  - github.com/narumiruna/bbgo-template
+  targets:
+  - name: bbgo-amd64-linux
+    os: linux
+    arch: amd64
+  - name: bbgo-arm64-darwin
+    os: darwin
+    arch: arm64
+
+exchangeStrategies:
+  - on: max
+    template:
+      symbol: BTCUSDT
+      interval: 1m
