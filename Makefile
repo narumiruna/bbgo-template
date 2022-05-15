@@ -1,5 +1,5 @@
 build:
-	bbgo build --config bbgo.yaml
+	go run ./cmd/bbgo.go build --config bbgo.yaml
 
 clean:
 	rm -rf build/*
