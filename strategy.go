@@ -18,8 +18,6 @@ func init() {
 }
 
 type Strategy struct {
-	Notifiability *bbgo.Notifiability
-
 	Symbol   string         `json:"symbol"`
 	Interval types.Interval `json:"interval"`
 }
@@ -42,7 +40,7 @@ func (s *Strategy) Subscribe(session *bbgo.ExchangeSession) {
 
 func (s *Strategy) Run(ctx context.Context, orderExecutor bbgo.OrderExecutor, session *bbgo.ExchangeSession) error {
 	session.MarketDataStream.OnKLineClosed(func(kline types.KLine) {
-		log.Infof("kline: %v", kline)
+		bbgo.Notify(kline)
 	})
 	return nil
 }
