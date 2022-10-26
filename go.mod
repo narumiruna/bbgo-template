@@ -3,7 +3,7 @@ module github.com/narumiruna/bbgo-template
 go 1.17
 
 require (
-	github.com/c9s/bbgo v1.30.3
+	github.com/c9s/bbgo v1.39.2
 	github.com/sirupsen/logrus v1.8.1
 )
 
